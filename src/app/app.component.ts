@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'commander-trading';
+  isMenuOpened = true;
+
+  pages = [
+    { link: 'add-product', title: 'Add Product' },
+    { link: 'edit-product', title: 'Edit Product' },
+    { link: 'add-stock', title: 'Add Stock' }
+  ]
 }
