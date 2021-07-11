@@ -1,1 +1,60 @@
-<p>add-product works!</p>
+<h1>Add New Product</h1>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <p>
+    <mat-form-field>
+      <mat-label>Product Name</mat-label>
+      <input
+        matInput
+        [(ngModel)]="product.name"
+        name="productName"
+        minlength="2"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Product Code</mat-label>
+      <input
+        matInput
+        [(ngModel)]="product.code"
+        name="code"
+        placeholder="ABC"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Unit of Sale</mat-label>
+      <input
+        matInput
+        [(ngModel)]="product.unit"
+        name="unit"
+        placeholder="km"
+        required
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Price per Unit</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="product.price"
+        name="price"
+        min="1"
+      />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="f.invalid"
+    >
+      Add Product
+    </button>
+  </p>
+</form>

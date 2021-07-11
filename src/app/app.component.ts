@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isMenuOpened = true;
+  isMenuOpened = true
 
   pages = [
     { link: 'add-product', title: 'Add Product' },
     { link: 'edit-product', title: 'Edit Product' },
-    { link: 'add-stock', title: 'Add Stock' }
+    { link: 'add-stock', title: 'Add Stock' },
+    { link: 'new-order', title: 'Create New Order' },
   ]
 }

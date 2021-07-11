@@ -1,0 +1,19 @@
+<div>
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      [formControl]="searchControl"
+      placeholder="Search for product..."
+    />
+  </mat-form-field>
+  <mat-action-list style="max-height: 33vh; overflow: scroll">
+    <button
+      mat-list-item
+      *ngFor="let product of filteredProducts | async"
+      (click)="selectProduct(product)"
+    >
+      {{ product.name }}
+    </button>
+  </mat-action-list>
+</div>
